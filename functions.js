@@ -3,7 +3,7 @@ const identity = function (value) {
 };
 const first = function (array, n) {
   let newArr=[]
-  if (n === null){
+  if (n === undefined){
     return array[0]
   }else {
   for (let i = 0;  i < n; i++){
