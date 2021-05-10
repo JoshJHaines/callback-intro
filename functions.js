@@ -3,13 +3,9 @@ const identity = function (value) {
 };
 const first = function (array, n) {
   let newArr=[]
-  if (n !== 0){
     for (let i = 0;  i < n; i++){
       newArr.push(array[i])
     }
-  } else {
-    newArr.push(array[0])
-  }
   return newArr
 };
 
