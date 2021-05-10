@@ -15,19 +15,24 @@ const first = function (array, n) {
 };
 
 const last = function (array, n) {
-  let newArr = [];
+	let newArr = [];
 	if (n === undefined) {
-		return array[array.length-1];
+		return array[array.length - 1];
 	}
-  if (n === 0){
-    return []
-  }
-
+	if (n === 0) {
+		return [];
+	}
+	if (n >= array.length) {
+		return array;
+	} else {
+		for (i = array.length - n; i < array.length; i++) {
+			newArr.push(array[i]);
+		}
+		return newArr;
+	}
 };
 
-const each = function (collection, callback) {
-
-};
+const each = function (collection, callback) {};
 const indexOf = function (array, target) {};
 const map = function (collection, iterator) {};
 
