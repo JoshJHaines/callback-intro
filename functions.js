@@ -3,10 +3,14 @@ const identity = function (value) {
 };
 const first = function (array, n) {
   let newArr=[]
-    for (let i = 0;  i < n; i++){
-      newArr.push(array[i])
-    }
+  if (n === null){
+    return array[0]
+  }else {
+  for (let i = 0;  i < n; i++){
+    newArr.push(array[i])
+  }
   return newArr
+}
 };
 
 const last = function (array, n) {};
