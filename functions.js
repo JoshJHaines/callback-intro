@@ -33,22 +33,16 @@ const last = function (array, n) {
 };
 
 const each = function (collection, callback) {
-  let newArr = []
-  for (i=0; i < collection.length; i++){
-    let tempArr = []
-    tempArr.push(collection[i])
-    tempArr.push(i)
-    tempArr.push(collection)
-    newArr.push(tempArr)
+	if (collection instanceof Array) {
+		for (i = 0; i < collection.length; i++) {
+			callback (collection[i], i, collection)
+		}
+	} else {
+    for ( let prop in collection) {
+      callback(collection[prop], prop, collection)
+    }
   }
-  return newArr
 };
-
-var animals = ["ant", "bat", "cat"]
-each(animals)
- let test1 = each(animals)
- test1
-
 
 
 const indexOf = function (array, target) {};
