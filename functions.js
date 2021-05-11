@@ -45,8 +45,23 @@ const each = function (collection, callback) {
 };
 
 
-const indexOf = function (array, target) {};
-const map = function (collection, iterator) {};
+const indexOf = function (array, target) {
+  for (let i=0; i <array.length; i++){
+    if (array[i] === target){
+      return i
+    }
+  }
+  return -1
+};
+
+const map = function (collection, callback) {
+  let result = [];
+
+  each(collection, function (item){
+    result.push(callback(item))
+  });
+  return result
+};
 
 module.exports = {
 	identity,
